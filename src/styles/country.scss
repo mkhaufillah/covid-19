@@ -1,0 +1,52 @@
+country-elem {
+    flex-grow: 1;
+    padding: 12px;
+    .card {
+        border-radius: 12px;
+        @include shadow();
+        padding: 12px {
+            left: 24px;
+            right: 24px;
+        }
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        background-color: $dark-grey;
+        &:hover {
+            @include prefix(transition, $transition, moz webkit ms o);
+            background-color: $light-grey;
+            color: $background;
+        }
+        > div {
+            display: flex;
+            > p {
+                padding: 6px;
+                margin-right: 6px;
+                border-radius: 6px;
+                flex-grow: 1;
+            }
+        }
+        > p {
+            flex-grow: 1;
+        }
+    }
+    &.open {
+        @include prefix(transition, $transition, moz webkit ms o);
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+        width: 100vw;
+        height: 100vh;
+        padding: 96px;
+        background-color: $background;
+        .card {
+            &:hover {
+                background-color: $dark-grey;
+                color: $foreground;
+            }
+        }
+    }
+}

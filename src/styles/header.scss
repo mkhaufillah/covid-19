@@ -1,0 +1,12 @@
+header {
+    padding: 24px;
+    h1 {
+        width: 100%;
+        height: auto;
+        text-align: center;
+        span {
+            color: $primary;
+            font-weight: 400;
+        }
+    }
+}

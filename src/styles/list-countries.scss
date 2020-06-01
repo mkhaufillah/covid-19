@@ -1,0 +1,114 @@
+list-countries {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    @include respond-to(xs) {
+        .sshow {
+            display: block;
+        }
+        .mshow {
+            display: none;
+        }
+        .lshow {
+            display: none;
+        }
+        .sshow-flex {
+            display: flex;
+        }
+        .mshow-flex {
+            display: none;
+        }
+        .lshow-flex {
+            display: none;
+        }
+    }
+    @include respond-to(s) {
+        .sshow {
+            display: block;
+        }
+        .mshow {
+            display: none;
+        }
+        .lshow {
+            display: none;
+        }
+        .sshow-flex {
+            display: flex;
+        }
+        .mshow-flex {
+            display: none;
+        }
+        .lshow-flex {
+            display: none;
+        }
+    }
+    @include respond-to(m) {
+        .sshow {
+            display: none;
+        }
+        .mshow {
+            display: block;
+        }
+        .lshow {
+            display: none;
+        }
+        .sshow-flex {
+            display: none;
+        }
+        .mshow-flex {
+            display: flex;
+        }
+        .lshow-flex {
+            display: none;
+        }
+    }
+    @include respond-to(l) {
+        .sshow {
+            display: none;
+        }
+        .mshow {
+            display: none;
+        }
+        .lshow {
+            display: block;
+        }
+        .sshow-flex {
+            display: none;
+        }
+        .mshow-flex {
+            display: none;
+        }
+        .lshow-flex {
+            display: flex;
+        }
+    }
+    > div {
+        display: flex;
+        > p {
+            flex-grow: 1;
+            text-align: center;
+            span {
+                color: $primary;
+            }
+        }
+        > h4 {
+            margin-right: 12px;
+        }
+    }
+    > .m-1 {
+        margin: 12px;
+    }
+    > .statistics {
+        flex-direction: column;
+        background-color: $dark-grey;
+        margin: 12px;
+        padding: 12px {
+            left: 24px;
+            right: 24px;
+        }
+        border-radius: 12px;
+        @include shadow();
+    }
+}
+
+@import "./country.scss";

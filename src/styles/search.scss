@@ -1,0 +1,32 @@
+search-elem {
+    display: flex;
+    padding: 24px;
+    @include respond-to(xs) {
+        margin: {
+            left: 12px;
+            right: 12px;
+        }
+    }
+    @include respond-to(s) {
+        margin: {
+            left: 24px;
+            right: 24px;
+        }
+    }
+    @include respond-to(m) {
+        margin: {
+            left: 64px;
+            right: 64px;
+        }
+    }
+    @include respond-to(l) {
+        margin: {
+            left: 128px;
+            right: 128px;
+        }
+    }
+    input {
+        flex-grow: 1;
+        border-radius: 12px;
+    }
+}

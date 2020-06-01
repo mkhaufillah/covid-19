@@ -1,0 +1,101 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    body {
+        padding: 0;
+        margin: 0;
+        font-family: $font-primary;
+        background-color: $background;
+        color: $foreground;
+        container-elem {
+            a {
+                color: $primary;
+                text-decoration: none;
+                &:hover {
+                    color: $secondary;
+                }
+            }
+            button {
+                display: inline-block;
+                background: {
+                    image: $gradient-primary;
+                    color: $primary;
+                }
+                padding: 12px {
+                    left: 48px;
+                    right: 48px;
+                }
+                @include respond-to(xs) {
+                    padding: 12px;
+                }
+                color: $background;
+                font-weight: 700;
+                text: {
+                    decoration: none;
+                    transform: uppercase;
+                }
+                cursor: pointer;
+                border: none;
+                &:hover {
+                    @include prefix(transition, $transition, moz webkit ms o);
+                    background: {
+                        image: none;
+                        color: $secondary;
+                    }
+                }
+            }
+            input {
+                @mixin input-style {
+                    display: inline-block;
+                    background-color: $foreground;
+                    padding: 12px;
+                    color: $background;
+                    font-weight: 400;
+                    text-decoration: none;
+                    border: none;
+                }
+                &[type="text"] {
+                    @include input-style();
+                }
+            }
+            .red {
+                background-color: $red;
+                color: $foreground;
+            }
+            .yellow {
+                background-color: $yellow;
+                color: $background;
+            }
+            .green {
+                background-color: $green;
+                color: $background;
+            }
+            .primary {
+                background-color: $primary;
+                color: $foreground;
+            }
+            .grey {
+                background-color: $light-grey;
+                color: $background;
+            }
+            .red-text {
+                color: $red;
+            }
+            .yellow-text {
+                color: $yellow;
+            }
+            .green-text {
+                color: $green;
+            }
+            .primary-text {
+                color: $primary;
+            }
+            .grey-text {
+                color: $light-grey;
+            }
+        }
+    }
+}

@@ -1,0 +1,76 @@
+spinner-elem {
+    position: fixed;
+    z-index: 5;
+    width: 100vw;
+    height: 100vh;
+    background-image: $gradient-primary;
+    > div {
+        width: 150px;
+        height: 150px;
+        position: relative;
+        margin: 0 auto;
+        margin-top: calc(50vh - 150px);
+        overflow: hidden;
+    }
+    > div {
+        div {
+            position: absolute;
+            width: calc(100% - 9.9px);
+            height: calc(100% - 9.9px);
+            border: 5px solid transparent;
+            border-top-color: $background;
+            border-radius: 50%;
+            @include prefix(animation, spin 5s cubic-bezier(0.17, 0.49, 0.96, 0.76) infinite, moz webkit ms o);
+        }
+        @-webkit-keyframes spin {
+            from {
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            to {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+        @-moz-keyframes spin {
+            from {
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            to {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+        @-ms-keyframes spin {
+            from {
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            to {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+        @-o-keyframes spin {
+            from {
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            to {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+        @keyframes spin {
+            from {
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            to {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+    }
+}

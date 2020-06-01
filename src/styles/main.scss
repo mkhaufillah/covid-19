@@ -1,0 +1,8 @@
+main {
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+}
+
+@import "./search.scss";
+@import "./list-countries.scss";

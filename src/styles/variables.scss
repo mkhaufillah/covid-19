@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap");
+
+$primary: #237ff7;
+$secondary: #22b4b9;
+$background: #1a1a1a;
+$foreground: #ffffff;
+$gradient-primary: linear-gradient(to right, #237ff7, #22b4b9);
+
+$font-primary: "Lato", sans-serif;
+$transition: 0.7s ease-in-out;
+
+$red: #c03a3a;
+$yellow: #d8e060;
+$green: #4ee688;
+$light-grey: #d6d6d6;
+$dark-grey: #2b2b2b;
+
+@mixin shadow($color: #ffffff) {
+    box-shadow: 2px 2px 8px 0 #{$color}0d;
+}
+
+@mixin prefix($property, $value, $prefixes) {
+    @each $prefix in $prefixes {
+        -#{$prefix}-#{$property}: $value;
+    }
+    #{$property}: $value;
+}
+
+$break-small: 600px;
+$break-medium: 768px;
+$break-large: 992px;
+$break-xlarge: 1200px;
+
+@mixin respond-to($media) {
+    @if $media == xs {
+        @media only screen and (max-width: $break-small) {
+            @content;
+        }
+    } @else if $media == s {
+        @media only screen and (min-width: $break-small) {
+            @content;
+        }
+    } @else if $media == m {
+        @media only screen and (min-width: $break-medium) {
+            @content;
+        }
+    } @else if $media == l {
+        @media only screen and (min-width: $break-large) {
+            @content;
+        }
+    } @else if $media == xl {
+        @media only screen and (min-width: $break-xlarge) {
+            @content;
+        }
+    }
+}
